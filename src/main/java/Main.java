@@ -32,6 +32,5 @@ public class Main {
             }
         } while (menu != 9);
 
-        //database.addSuperhero(name, superHeroName, power, year, strength, origin, human);
     }
 }

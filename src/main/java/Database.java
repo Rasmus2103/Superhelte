@@ -8,7 +8,6 @@ public class Database {
     Scanner sc;
 
     public void addSuperhero(String name, String superHeroName, String power, int year, double strength, String orgin, boolean human) {
-        //Helte super1 = new Helte(name, superHeroName, power, year, strength, orgin, human);
         database[n] = new Helte(name, superHeroName, power, year, strength, orgin, human);
         n++;
     }
