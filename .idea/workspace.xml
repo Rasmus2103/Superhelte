@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0354ab04-c145-43b9-9752-766c604a8dc4" name="Changes" comment="Commited">
+    <list default="true" id="0354ab04-c145-43b9-9752-766c604a8dc4" name="Changes" comment="Tilføjet alt SystemPrintOut i Database, og tilføjet switch, cases og breaks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Helte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Helte.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +49,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662971811154</updated>
-      <workItem from="1662971812470" duration="11403000" />
+      <workItem from="1662971812470" duration="12095000" />
     </task>
     <task id="LOCAL-00001" summary="Commited">
       <created>1663013041723</created>
@@ -66,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663013131966</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Tilføjet alt SystemPrintOut i Database, og tilføjet switch, cases og breaks">
+      <created>1663018037319</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663018037319</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +91,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commited" />
+    <MESSAGE value="Tilføjet alt SystemPrintOut i Database, og tilføjet switch, cases og breaks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet alt SystemPrintOut i Database, og tilføjet switch, cases og breaks" />
   </component>
 </project>

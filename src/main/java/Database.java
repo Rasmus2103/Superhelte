@@ -18,7 +18,9 @@ public class Database {
         n++;
     }
 
+    //Oprettelse af Superhelte
     public void createAndAddHero() {
+        //Tjekker om oprettelsen overskrider det maksimale i helte arrayet
         if(n > database.length) {
             System.out.println("Du kan ikke tilføje flere helte");
         } else {
@@ -32,8 +34,10 @@ public class Database {
             int svar = sc.nextInt();
             sc.nextLine();
 
+            //Laver superHeroName til null da den starter med ikke have nogen værdi
             String superHeroName = null;
 
+            //Tilføjer et superheltenavn hvis man taster 1, hvilket giver den en værdi
             if(svar == 1) {
                 System.out.println("\nIndtast superheltenavnet her: ");
                 superHeroName = sc.nextLine();
@@ -72,14 +76,14 @@ public class Database {
             System.out.println("\nSkriv din helts oprindelseshistorie her: ");
             String origin = sc.next();
 
+            //Tjekker om helten har et superheltenavn
             if(superHeroName == null) {
                 addSuperhero(name, power, year, strength, origin, isHuman);
                 System.out.println("\nDu har tilføjet " + name + " til databasen");
             } else {
                 addSuperhero(name, superHeroName, power, year, strength, origin, isHuman);
-                System.out.println("\nDu har tilføjet " + name + "også kaldet for " + superHeroName + " til databasen");
+                System.out.println("\nDu har tilføjet " + name + " også kaldet for " + superHeroName + " til databasen");
             }
-
 
 
         }
