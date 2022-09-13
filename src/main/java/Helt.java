@@ -1,4 +1,4 @@
-public class Helte {
+public class Helt {
 
     private String name;
     private String superHeroName;
@@ -8,7 +8,7 @@ public class Helte {
     private String origin;
     private boolean human;
 
-    public Helte(String name, String superheroName, String power, int year, double strength, String origin, boolean human) {
+    public Helt(String name, String superheroName, String power, int year, double strength, String origin, boolean human) {
         this.name = name;
         this.superHeroName = superheroName;
         this.power = power;
@@ -18,7 +18,7 @@ public class Helte {
         this.origin = origin;
     }
 
-    public Helte(String name, String power, int year, double strength, String origin, boolean human) {
+    public Helt(String name, String power, int year, double strength, String origin, boolean human) {
         this.name = name;
         this.power = power;
         this.year = year;
@@ -39,8 +39,16 @@ public class Helte {
         return superHeroName;
     }
 
+    public void setSuperHeroName() {
+        this.superHeroName = superHeroName;
+    }
+
     public String getPower() {
         return power;
+    }
+
+    public void setPower() {
+        this.power = power;
     }
 
     public int getYear() {
@@ -55,12 +63,26 @@ public class Helte {
         return strength;
     }
 
+    public void setStrength() {
+        this.strength = strength;
+    }
+
     public String getOrigin() {
         return origin;
     }
 
     public boolean getHuman() {
         return human;
+    }
+
+    public String toString() {
+        return "Navn: " + name +
+                "\nSuperheltnavn: " + superHeroName +
+                "\nSuperkræft: " + power +
+                "\nUdgivelses år: " + year +
+                "\nStyrkeniveau: " + strength +
+                "\nOprindelses historie" + origin +
+                "\nMenneske: " + human + "\n";
     }
 
 }

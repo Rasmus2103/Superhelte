@@ -1,30 +1,30 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Database {
 
-    private Helte[] database = new Helte[5];
-    int n = 0;
+    //private Helte[] database = new Helte[5];
+    private ArrayList<Helt> helte = new ArrayList();
+    //int n = 0;
 
     Scanner sc;
 
     public void addSuperhero(String name, String superHeroName, String power, int year, double strength, String orgin, boolean human) {
-        database[n] = new Helte(name, superHeroName, power, year, strength, orgin, human);
-        n++;
+        helte.add(new Helt(name, superHeroName, power, year, strength, orgin, human));
     }
 
     public void addSuperhero (String name, String power, int year, double strength, String origin, boolean human) {
-        database[n] = new Helte(name, power, year, strength, origin, human);
-        n++;
+         helte.add(new Helt(name, power, year, strength, origin, human));
     }
 
     //Oprettelse af Superhelte
     public void createAndAddHero() {
         //Tjekker om oprettelsen overskrider det maksimale i helte arrayet
-        if(n > database.length) {
+        /*if(n > database.length) {
             System.out.println("Du kan ikke tilføje flere helte");
-        } else {
+        }*/
             sc = new Scanner(System.in);
-            System.out.println("Tilføj en Superhelt");
+            System.out.println("Du kan nu tilføje en Superhelt");
 
             System.out.println("\nIndtast Superhelten rigtige navn her: ");
             String name = sc.nextLine();
@@ -46,13 +46,22 @@ public class Database {
             String power = sc.nextLine();
 
             //Tjekker om ens helt er et menneske
-            System.out.println("\nEr din superhelt menneske? :");
+            System.out.println("\nEr din superhelt et menneske? :");
             boolean isHuman = true;
-            int choice;
-            do {
+            int choice = 0;
+            while(choice != 1 && choice != 2) {
                 System.out.println("\n Indtast 1 for ja\nIndtast 2 for nej");
                 choice = sc.nextInt();
-                switch (choice) {
+                if(choice == 1) {
+                    isHuman = true;
+                }
+                else if(choice == 2) {
+                    isHuman = false;
+                } else {
+                    System.out.println("Dit input kan ikke registeres, indtast igen");
+                }
+
+                /*switch (choice) {
                     case 1:
                         isHuman = true;
                         break;
@@ -61,8 +70,8 @@ public class Database {
                         break;
                     default:
                         System.out.println("Dit input kunne ikke registeres, indtast igen");
-                }
-            } while(choice != 1 && choice != 2);
+                }*/
+            }
 
             sc.nextLine();
 
@@ -84,8 +93,10 @@ public class Database {
                 System.out.println("\nDu har tilføjet " + name + " også kaldet for " + superHeroName + " til databasen");
             }
 
+    }
 
-        }
+    public ArrayList<Helt> getHelte() {
+        return helte;
     }
 
 }
