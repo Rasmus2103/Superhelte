@@ -94,7 +94,7 @@ public class Database {
 
     public void searchForHero() {
         sc = new Scanner(System.in);
-        System.out.println("Du kan her søge på Superhelte efter deres rigtige navn og superkræfter");
+        System.out.println("Du kan her søge på Superhelte");
 
         String name = sc.nextLine();
         boolean fundet = false;
