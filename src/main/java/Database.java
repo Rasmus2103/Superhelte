@@ -2,10 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Database {
-
-    //private Helte[] database = new Helte[5];
     private ArrayList<Helt> helte = new ArrayList();
-    //int n = 0;
 
     Scanner sc;
 

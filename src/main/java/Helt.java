@@ -75,6 +75,10 @@ public class Helt {
         return human;
     }
 
+    public void setHuman() {
+        this.human = human;
+    }
+
     public String toString() {
         return "Navn: " + name +
                 "\nSuperheltnavn: " + superHeroName +
