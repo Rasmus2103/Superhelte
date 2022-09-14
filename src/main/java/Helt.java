@@ -80,12 +80,12 @@ public class Helt {
     }
 
     public String toString() {
-        return "Navn: " + name +
+        return "\nNavn: " + name +
                 "\nSuperheltnavn: " + superHeroName +
                 "\nSuperkræft: " + power +
                 "\nUdgivelses år: " + year +
                 "\nStyrkeniveau: " + strength +
-                "\nOprindelses historie" + origin +
+                "\nOprindelses historie: " + origin +
                 "\nMenneske: " + human + "\n";
     }
 

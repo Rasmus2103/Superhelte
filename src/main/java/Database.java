@@ -92,6 +92,23 @@ public class Database {
 
     }
 
+    public void searchForHero() {
+        sc = new Scanner(System.in);
+        System.out.println("Du kan her søge på Superhelte efter deres rigtige navn og superkræfter");
+
+        String name = sc.nextLine();
+        boolean fundet = false;
+        for(Helt helt : helte) {
+            if(helt.getName().toLowerCase().contains(name.toLowerCase())) {
+                System.out.println("Din søgning på " + name + " gav disse resultater " + helt + "\n");
+                fundet = true;
+            }
+        }
+        if(!fundet) {
+            System.out.println("Kunne ikke finde " + name + " i databasen");
+        }
+    }
+
     public ArrayList<Helt> getHelte() {
         return helte;
     }
