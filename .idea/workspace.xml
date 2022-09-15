@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0354ab04-c145-43b9-9752-766c604a8dc4" name="Changes" comment="Tilføjet kommentarer">
+    <list default="true" id="0354ab04-c145-43b9-9752-766c604a8dc4" name="Changes" comment="Tilføjet mit aktivitetsdiagram">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
@@ -33,14 +35,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/rasje/OneDrive/Skrivebord/KEA 1. Semester/Programmer/Superhelte"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,7 +53,9 @@
       <option name="presentableId" value="Default" />
       <updated>1662971811154</updated>
       <workItem from="1662971812470" duration="12172000" />
-      <workItem from="1663018839911" duration="122000" />
+      <workItem from="1663018839911" duration="269000" />
+      <workItem from="1663065256951" duration="30606000" />
+      <workItem from="1663234300905" duration="13034000" />
     </task>
     <task id="LOCAL-00001" summary="Commited">
       <created>1663013041723</created>
@@ -80,7 +85,49 @@
       <option name="project" value="LOCAL" />
       <updated>1663018708736</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Tilføjet kommentarer">
+      <created>1663018975404</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663018975404</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Tilføjet metode som man kan se liste af superhelte">
+      <created>1663079590413</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663079590413</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Tilføjet metode som man kan se liste af superhelte">
+      <created>1663136995658</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663136995658</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Tilføjet søgefunktion som man kan søge efter navne">
+      <created>1663154315292</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663154315292</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Tilføjet søgefunktion som man kan søge efter navne">
+      <created>1663195056191</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663195056191</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Tilføjet mit aktivitetsdiagram">
+      <created>1663195267706</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663195267706</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +148,9 @@
     <MESSAGE value="Commited" />
     <MESSAGE value="Tilføjet alt SystemPrintOut i Database, og tilføjet switch, cases og breaks" />
     <MESSAGE value="Tilføjet kommentarer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet kommentarer" />
+    <MESSAGE value="Tilføjet metode som man kan se liste af superhelte" />
+    <MESSAGE value="Tilføjet søgefunktion som man kan søge efter navne" />
+    <MESSAGE value="Tilføjet mit aktivitetsdiagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet mit aktivitetsdiagram" />
   </component>
 </project>

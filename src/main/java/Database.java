@@ -1,8 +1,16 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Database {
-    private ArrayList<Helt> helte = new ArrayList();
+    private ArrayList<Helt> helte;
+
+    public Database() {
+        Helt h1 = new Helt("Clark Kent", "Supermand", "Laserøjne", 1938, 9.7, "dfsdfsdfdsdf", false);
+        Helt h2 = new Helt("Peter Parker", "Spider Man", "Edderkoppekræfter", 1968, 8.6, "klkkjoasij", true);
+
+        helte = new ArrayList<Helt>(List.of(h1, h2));
+    }
 
     Scanner sc;
 
@@ -95,7 +103,38 @@ public class Database {
     public void searchForHero() {
         sc = new Scanner(System.in);
         System.out.println("Du kan her søge på Superhelte");
+        System.out.println("\n1 Søg efter navn " +
+                            "\n2 Søg efter superheltenavn" +
+                            "\n3 Søg efter power" +
+                            "\n4 Søg efter udgivelsesår" +
+                            "\n5 Søg efter styrkeniveau" +
+                            "\n6 Søg efter oprindelseshistorie");
+        int choice = sc.nextInt();
+        if(choice == 1) {
+            searchByname();
+        }
+        if(choice == 2) {
+            searchBySuperName();
+        }
+        if(choice == 3) {
+            searchByPower();
+        }
+        if(choice == 4) {
+            searchByYear();
+        }
+        if(choice == 5) {
+            searchByStrength();
+        }
+        if(choice == 6) {
+            searchByOrigin();
+        }
 
+    }
+
+    private void searchByname() {
+        sc = new Scanner(System.in);
+
+        System.out.println("Du kan nu søge efter navn");
         String name = sc.nextLine();
         boolean fundet = false;
         for(Helt helt : helte) {
@@ -108,6 +147,92 @@ public class Database {
             System.out.println("Kunne ikke finde " + name + " i databasen");
         }
     }
+
+    private void searchBySuperName() {
+        sc = new Scanner(System.in);
+
+        System.out.println("Du kan nu søge efter superheltenavnet");
+        String name = sc.nextLine();
+        boolean fundet = false;
+        for(Helt helt : helte) {
+            if(helt.getSuperHeroName().toLowerCase().contains(name.toLowerCase())) {
+                System.out.println("Din søgning på " + name + " gav disse resultater " + helt + "\n");
+                fundet = true;
+            }
+        }
+        if(!fundet) {
+            System.out.println("Kunne ikke finde " + name + " i databasen");
+        }
+    }
+
+    private void searchByPower() {
+        sc = new Scanner(System.in);
+
+        System.out.println("Du kan nu søge efter superkræfter");
+        String name = sc.nextLine();
+        boolean fundet = false;
+        for(Helt helt : helte) {
+            if(helt.getPower().toLowerCase().contains(name.toLowerCase())) {
+                System.out.println("Din søgning på " + name + " gav disse resultater " + helt + "\n");
+                fundet = true;
+            }
+        }
+        if(!fundet) {
+            System.out.println("Kunne ikke finde " + name + " i databasen");
+        }
+    }
+
+    private void searchByYear() {
+        sc = new Scanner(System.in);
+
+        System.out.println("Du kan nu søge efter udgivelsesår");
+        int year = sc.nextInt();
+        boolean fundet = false;
+        for(Helt helt : helte) {
+            if(helt.getYear() == year) {
+                System.out.println("Din søgning på " + year + " gav disse resultater " + helt + "\n");
+                fundet = true;
+            }
+        }
+        if(!fundet) {
+            System.out.println("Kunne ikke finde " + year + " i databasen");
+        }
+    }
+
+    private void searchByStrength() {
+        sc = new Scanner(System.in);
+
+        System.out.println("Du kan nu søge efter styrkeniveau");
+        double strength = sc.nextDouble();
+        boolean fundet = false;
+        for(Helt helt : helte) {
+            if(helt.getStrength() == strength) {
+                System.out.println("Din søgning på " + strength + " gav disse resultater " + helt + "\n");
+                fundet = true;
+            }
+        }
+        if(!fundet) {
+            System.out.println("Kunne ikke finde " + strength + " i databasen");
+        }
+    }
+
+    private void searchByOrigin() {
+        sc = new Scanner(System.in);
+
+        System.out.println("Du kan nu søge efter oprindelseshistorie");
+        String orgin = sc.nextLine();
+        boolean fundet = false;
+        for(Helt helt : helte) {
+            if(helt.getOrigin().toLowerCase().contains(orgin.toLowerCase())) {
+                System.out.println("Din søgning på " + orgin + " gav disse resultater " + helt + "\n");
+                fundet = true;
+            }
+        }
+        if(!fundet) {
+            System.out.println("Kunne ikke finde " + orgin + " i databasen");
+        }
+    }
+
 
     public ArrayList<Helt> getHelte() {
         return helte;
