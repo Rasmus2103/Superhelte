@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0354ab04-c145-43b9-9752-766c604a8dc4" name="Changes" comment="Tilføjet mit aktivitetsdiagram">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    <list default="true" id="0354ab04-c145-43b9-9752-766c604a8dc4" name="Changes" comment="Tilføjet UserInterface, og forbedret min søgefunktion så man kan vælge hvad man vil søge på.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Helt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Helt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +29,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2Ef1Qcd8dU0MGnyFOSrmJVrX0QN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -41,7 +44,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/rasje/OneDrive/Skrivebord/KEA 1. Semester/Programmer/Superhelte"
+    "last_opened_file_path": "C:/Users/rasje/OneDrive/Skrivebord/KEA 1. Semester/Programmer/Kageopskriften",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -55,7 +59,10 @@
       <workItem from="1662971812470" duration="12172000" />
       <workItem from="1663018839911" duration="269000" />
       <workItem from="1663065256951" duration="30606000" />
-      <workItem from="1663234300905" duration="13034000" />
+      <workItem from="1663234300905" duration="13115000" />
+      <workItem from="1663313044978" duration="6268000" />
+      <workItem from="1663458133959" duration="1028000" />
+      <workItem from="1663571643173" duration="9558000" />
     </task>
     <task id="LOCAL-00001" summary="Commited">
       <created>1663013041723</created>
@@ -127,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663195267706</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Tilføjet UserInterface, og forbedret min søgefunktion så man kan vælge hvad man vil søge på.">
+      <created>1663247764864</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663247764864</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +165,7 @@
     <MESSAGE value="Tilføjet metode som man kan se liste af superhelte" />
     <MESSAGE value="Tilføjet søgefunktion som man kan søge efter navne" />
     <MESSAGE value="Tilføjet mit aktivitetsdiagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet mit aktivitetsdiagram" />
+    <MESSAGE value="Tilføjet UserInterface, og forbedret min søgefunktion så man kan vælge hvad man vil søge på." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet UserInterface, og forbedret min søgefunktion så man kan vælge hvad man vil søge på." />
   </component>
 </project>

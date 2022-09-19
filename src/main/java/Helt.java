@@ -31,7 +31,7 @@ public class Helt {
         return name;
     }
 
-    public void setName() {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -39,7 +39,7 @@ public class Helt {
         return superHeroName;
     }
 
-    public void setSuperHeroName() {
+    public void setSuperHeroName(String superHeroName) {
         this.superHeroName = superHeroName;
     }
 
@@ -47,7 +47,7 @@ public class Helt {
         return power;
     }
 
-    public void setPower() {
+    public void setPower(String power) {
         this.power = power;
     }
 
@@ -55,7 +55,7 @@ public class Helt {
         return year;
     }
 
-    public void setYear() {
+    public void setYear(int year) {
         this.year = year;
     }
 
@@ -63,12 +63,16 @@ public class Helt {
         return strength;
     }
 
-    public void setStrength() {
+    public void setStrength(double strength) {
         this.strength = strength;
     }
 
     public String getOrigin() {
         return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
     }
 
     public boolean getHuman() {

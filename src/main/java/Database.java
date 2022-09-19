@@ -3,15 +3,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Database {
-    private ArrayList<Helt> helte;
+    private ArrayList<Helt> helte = new ArrayList<>();
 
     public Database() {
-        Helt h1 = new Helt("Clark Kent", "Supermand", "Laserøjne", 1938, 9.7, "dfsdfsdfdsdf", false);
-        Helt h2 = new Helt("Peter Parker", "Spider Man", "Edderkoppekræfter", 1968, 8.6, "klkkjoasij", true);
+        helte.add(new Helt("Clark Kent", "Supermand", "Laserøjne", 1938, 9.7, "Blev sendt væk da Krypton eksploderet, og han endte på Jorden.", false));
+        helte.add(new Helt("Peter Parker", "Spider Man", "Edderkoppekræfter", 1968, 8.6, "Han blev bidt af en radioaktiv edderkop.", true));
+        helte.add(new Helt("Bruce Wayne", "Batman", "Gadgets", 1938, 8.6, "Hans forældre blev dræbt, han trænede hårdt, og blev til Batman.", true));
 
-        helte = new ArrayList<Helt>(List.of(h1, h2));
+        //helte = new ArrayList<Helt>(List.of(h1, h2, h3));
     }
-
+    UserInterface ui;
     Scanner sc;
 
     public void addSuperhero(String name, String superHeroName, String power, int year, double strength, String orgin, boolean human) {
@@ -38,7 +39,7 @@ public class Database {
             int svar = sc.nextInt();
             sc.nextLine();
 
-            //Laver superHeroName til null da den starter med ikke have nogen værdi
+            //Laver superHeroName til null, da den starter med ikke have nogen værdi
             String superHeroName = null;
 
             //Tilføjer et superheltenavn hvis man taster 1, hvilket giver den en værdi
@@ -81,9 +82,17 @@ public class Database {
             sc.nextLine();
 
             System.out.println("\nIndtast de år de blev udgivet her: ");
+            while(!sc.hasNextInt()) {
+                String text = sc.next();
+                System.out.println("Du må ikke skrive " + text + ", det skal være tal");
+            }
             int year = sc.nextInt();
 
             System.out.println(("\nIndtast din helts styrke niveau her: "));
+            while (!sc.hasNextDouble()) {
+                String text = sc.next();
+                System.out.println("Du må ikke indtaste " + text + ", det skal være kommatal");
+            }
             double strength = sc.nextDouble();
 
             System.out.println("\nSkriv din helts oprindelseshistorie her: ");
@@ -100,15 +109,19 @@ public class Database {
 
     }
 
+    //Kommer frem med 6 søgemuligheder for at finde en superhelt
     public void searchForHero() {
         sc = new Scanner(System.in);
+        UserInterface ui = new UserInterface();
+
         System.out.println("Du kan her søge på Superhelte");
         System.out.println("\n1 Søg efter navn " +
                             "\n2 Søg efter superheltenavn" +
                             "\n3 Søg efter power" +
                             "\n4 Søg efter udgivelsesår" +
                             "\n5 Søg efter styrkeniveau" +
-                            "\n6 Søg efter oprindelseshistorie");
+                            "\n6 Søg efter oprindelseshistorie" +
+                            "\n9 Tilbage til menuen");
         int choice = sc.nextInt();
         if(choice == 1) {
             searchByname();
@@ -128,6 +141,9 @@ public class Database {
         if(choice == 6) {
             searchByOrigin();
         }
+        if(choice == 9) {
+            ui.startProgram();
+        }
 
     }
 
@@ -139,7 +155,7 @@ public class Database {
         boolean fundet = false;
         for(Helt helt : helte) {
             if(helt.getName().toLowerCase().contains(name.toLowerCase())) {
-                System.out.println("Din søgning på " + name + " gav disse resultater " + helt + "\n");
+                System.out.println("Din søgning på " + Color.GREEN + name + Color.RESET + " gav disse resultater " + helt + "\n");
                 fundet = true;
             }
         }
@@ -148,6 +164,7 @@ public class Database {
         }
     }
 
+    //Kan søge navnet på superhelten
     private void searchBySuperName() {
         sc = new Scanner(System.in);
 
@@ -165,6 +182,7 @@ public class Database {
         }
     }
 
+    //Kan søge efter superheltens superheltenavn
     private void searchByPower() {
         sc = new Scanner(System.in);
 
@@ -182,6 +200,7 @@ public class Database {
         }
     }
 
+    //Kan søge efter udgivelsesår
     private void searchByYear() {
         sc = new Scanner(System.in);
 
@@ -199,6 +218,7 @@ public class Database {
         }
     }
 
+    //Kan søge efter styrkeniveau
     private void searchByStrength() {
         sc = new Scanner(System.in);
 
@@ -216,6 +236,7 @@ public class Database {
         }
     }
 
+    //Kan søge efter oprindelseshistorie
     private void searchByOrigin() {
         sc = new Scanner(System.in);
 
@@ -230,6 +251,85 @@ public class Database {
         }
         if(!fundet) {
             System.out.println("Kunne ikke finde " + orgin + " i databasen");
+        }
+    }
+
+    public void userChoiceEdit() {
+        sc = new Scanner(System.in);
+        UserInterface ui = new UserInterface();
+        System.out.println("1 Edit superhero" +
+                "\n9 Back to menu");
+
+        int choice = sc.nextInt();
+        if (choice == 1) {
+            editTool();
+        }
+        if(choice == 9) {
+            ui.startProgram();
+        }
+    }
+
+    //Kan rette informationerne om alle de oprettet superhelte
+    public void editTool() {
+        sc = new Scanner(System.in);
+
+        for(int i = 0; i < getHelte().size(); i++) {
+            System.out.println(i + 1 + " Helt: " + getHelte().get(i));
+        }
+
+        System.out.println("Indtast nr på den superhelt der skal redigeres:");
+        int nr = sc.nextInt();
+        sc.nextLine();
+
+        //TODO Vis fejl når man indtaster et forkert input og det ikke crasher
+
+        Helt retHelt = null;
+        if(nr-1 >= helte.size()) {
+            System.out.println("Det nummer findes ikke i databasen");
+            userChoiceEdit();
+        } else {
+            retHelt = helte.get(nr - 1);
+
+            //Helt retHelt = getHelte().get(nr - 1);
+            System.out.println("Ret helt: " + retHelt);
+
+            System.out.println("Rediger data og tryk ENTER. Hvis data ikke skal redigeres tryk ENTER ");
+
+            System.out.println("Navn: " + retHelt.getName());
+            String newName = sc.nextLine();
+            if (!newName.isEmpty()) {
+                retHelt.setName(newName);
+            }
+
+            System.out.println("Superhelte navn: " + retHelt.getSuperHeroName());
+            String newSuperName = sc.nextLine();
+            if (!newSuperName.isEmpty()) {
+                retHelt.setSuperHeroName(newSuperName);
+            }
+
+            System.out.println("Superkræfter: " + retHelt.getPower());
+            String newPower = sc.nextLine();
+            if (!newPower.isEmpty()) {
+                retHelt.setPower(newPower);
+            }
+
+            System.out.println("Udgivelsesår: " + retHelt.getYear());
+            String newYear = sc.nextLine();
+            if (!newYear.isEmpty()) {
+                retHelt.setYear(Integer.parseInt(newYear));
+            }
+
+            System.out.println("Styrkeniveau: " + retHelt.getStrength());
+            String newStrength = sc.nextLine();
+            if (!newStrength.isEmpty()) {
+                retHelt.setStrength(Double.parseDouble(newStrength));
+            }
+
+            System.out.println("Oprindelses historie " + retHelt.getOrigin());
+            String newOrigin = sc.nextLine();
+            if (!newOrigin.isEmpty()) {
+                retHelt.setOrigin(newOrigin);
+            }
         }
     }
 

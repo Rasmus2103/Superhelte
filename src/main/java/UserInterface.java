@@ -15,13 +15,14 @@ public class UserInterface {
             System.out.println("""
                     ------------------------------------------------""");
 
-            //Menuen dukker frem med 2 muligheder opret og afslut
+            //Menuen dukker frem med 4 muligheder
             // do while gør at man har muligheden for at indtaste igen, hvis man ikke indtaster 1 & 9
             do {
                 System.out.println("\nVælg en af valgmulighederne " +
                         "\n1 Opret en Superhelt " +
                         "\n2 Se alle superhelte " +
                         "\n3 Find en superhelt" +
+                        "\n4 Ret en superhelt" +
                         "\n9 Afslut programmet");
                 menu = sc.nextInt();
 
@@ -36,6 +37,8 @@ public class UserInterface {
                     }
                 } else if (menu == 3) {
                     database.searchForHero();
+                } else if(menu == 4) {
+                    database.userChoiceEdit();
                 } else if (menu == 9) {
                     System.out.println("Vi ses");
                     System.exit(0);
@@ -43,6 +46,7 @@ public class UserInterface {
                     System.out.println("Dit input er ikke gyldigt");
                 }
             } while (menu != 9);
+
 
             /*switch (menu) {
                 case 1:
