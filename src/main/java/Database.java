@@ -23,6 +23,22 @@ public class Database {
          helte.add(new Helt(name, power, year, strength, origin, human));
     }
 
+    //Menu for at vælge at oprette en superhelt eller gå tilbage til startmenuen
+    public void userChoiceCreate() {
+        sc = new Scanner(System.in);
+        ui = new UserInterface();
+        System.out.println("1 Opret en superhelt" +
+                "\n9 Tilbage til menuen");
+
+        int choice = sc.nextInt();
+        if (choice == 1) {
+            createAndAddHero();
+        }
+        else if(choice == 9) {
+            ui.startProgram();
+        }
+    }
+
     //Oprettelse af Superhelte
     public void createAndAddHero() {
         //Tjekker om oprettelsen overskrider det maksimale i helte arrayet
@@ -64,7 +80,7 @@ public class Database {
                 else if(choice == 2) {
                     isHuman = false;
                 } else {
-                    System.out.println("Dit input kan ikke registeres, indtast igen");
+                    System.out.println(Color.RED + "Dit input kan ikke registeres, indtast igen" + Color.RESET);
                 }
 
                 /*switch (choice) {
@@ -91,7 +107,7 @@ public class Database {
             System.out.println(("\nIndtast din helts styrke niveau her: "));
             while (!sc.hasNextDouble()) {
                 String text = sc.next();
-                System.out.println("Du må ikke indtaste " + text + ", det skal være kommatal");
+                System.out.println(Color.RED + "Du må ikke indtaste " + text + ", det skal være kommatal" + Color.RESET);
             }
             double strength = sc.nextDouble();
 
@@ -112,7 +128,7 @@ public class Database {
     //Kommer frem med 6 søgemuligheder for at finde en superhelt
     public void searchForHero() {
         sc = new Scanner(System.in);
-        UserInterface ui = new UserInterface();
+        ui = new UserInterface();
 
         System.out.println("Du kan her søge på Superhelte");
         System.out.println("\n1 Søg efter navn " +
@@ -157,10 +173,12 @@ public class Database {
             if(helt.getName().toLowerCase().contains(name.toLowerCase())) {
                 System.out.println("Din søgning på " + Color.GREEN + name + Color.RESET + " gav disse resultater " + helt + "\n");
                 fundet = true;
+                searchForHero();
             }
         }
         if(!fundet) {
-            System.out.println("Kunne ikke finde " + name + " i databasen");
+            System.out.println(Color.RED + "Kunne ikke finde " + name + " i databasen" + Color.RESET);
+            searchByname();
         }
     }
 
@@ -175,10 +193,12 @@ public class Database {
             if(helt.getSuperHeroName().toLowerCase().contains(name.toLowerCase())) {
                 System.out.println("Din søgning på " + name + " gav disse resultater " + helt + "\n");
                 fundet = true;
+                searchForHero();
             }
         }
         if(!fundet) {
             System.out.println("Kunne ikke finde " + name + " i databasen");
+            searchBySuperName();
         }
     }
 
@@ -193,10 +213,12 @@ public class Database {
             if(helt.getPower().toLowerCase().contains(name.toLowerCase())) {
                 System.out.println("Din søgning på " + name + " gav disse resultater " + helt + "\n");
                 fundet = true;
+                searchForHero();
             }
         }
         if(!fundet) {
             System.out.println("Kunne ikke finde " + name + " i databasen");
+            searchByPower();
         }
     }
 
@@ -211,10 +233,12 @@ public class Database {
             if(helt.getYear() == year) {
                 System.out.println("Din søgning på " + year + " gav disse resultater " + helt + "\n");
                 fundet = true;
+                searchForHero();
             }
         }
         if(!fundet) {
             System.out.println("Kunne ikke finde " + year + " i databasen");
+            searchByYear();
         }
     }
 
@@ -229,10 +253,12 @@ public class Database {
             if(helt.getStrength() == strength) {
                 System.out.println("Din søgning på " + strength + " gav disse resultater " + helt + "\n");
                 fundet = true;
+                searchForHero();
             }
         }
         if(!fundet) {
             System.out.println("Kunne ikke finde " + strength + " i databasen");
+            searchByStrength();
         }
     }
 
@@ -247,24 +273,26 @@ public class Database {
             if(helt.getOrigin().toLowerCase().contains(orgin.toLowerCase())) {
                 System.out.println("Din søgning på " + orgin + " gav disse resultater " + helt + "\n");
                 fundet = true;
+                searchForHero();
             }
         }
         if(!fundet) {
             System.out.println("Kunne ikke finde " + orgin + " i databasen");
+            searchByOrigin();
         }
     }
 
     public void userChoiceEdit() {
         sc = new Scanner(System.in);
-        UserInterface ui = new UserInterface();
-        System.out.println("1 Edit superhero" +
-                "\n9 Back to menu");
+        ui = new UserInterface();
+        System.out.println("1 Redigere en superhelt" +
+                        "\n9 Tilbage til menuen");
 
         int choice = sc.nextInt();
         if (choice == 1) {
             editTool();
         }
-        if(choice == 9) {
+        else if(choice == 9) {
             ui.startProgram();
         }
     }
@@ -281,11 +309,9 @@ public class Database {
         int nr = sc.nextInt();
         sc.nextLine();
 
-        //TODO Vis fejl når man indtaster et forkert input og det ikke crasher
-
         Helt retHelt = null;
         if(nr-1 >= helte.size()) {
-            System.out.println("Det nummer findes ikke i databasen");
+            System.out.println(Color.RED + "Nr. " + nr + " findes ikke i databasen" + Color.RESET);
             userChoiceEdit();
         } else {
             retHelt = helte.get(nr - 1);
@@ -331,6 +357,42 @@ public class Database {
                 retHelt.setOrigin(newOrigin);
             }
         }
+    }
+
+    public void deleteHero() {
+        sc = new Scanner(System.in);
+        ui = new UserInterface();
+
+        System.out.println("Vælg en helt du gerne vil have slettet");
+        for(Helt helt: helte) {
+            System.out.println(helte.indexOf(helt) + 1 + ". " + helt.getName());
+        }
+        int choice1 = readInt();
+        System.out.println("Er du sikker på du gerne vil slette " + helte.get(choice1 -1).getName() + " \n1 Slet " +
+                            helte.get(choice1 -1).getName() + "\n2. Fortryd");
+
+        int choice2 = readInt();
+        if(choice2 == 1) {
+            ui.startProgram();
+        }
+        else if(choice2 == 2) {
+            ui.startProgram();
+        }
+        else {
+            System.out.println("Dit input er ikke gyldigt");
+            deleteHero();
+        }
+    }
+
+    public int readInt() {
+        while(!sc.hasNextInt()) {
+            String text = sc.next();
+            System.out.println(text + " er ugyldig input, prøv igen");
+        }
+        int result;
+        result = sc.nextInt();
+        sc.nextLine();
+        return result;
     }
 
 

@@ -84,13 +84,13 @@ public class Helt {
     }
 
     public String toString() {
-        return "\nNavn: " + name +
+        return Color.GREEN + "\nNavn: " + name +
                 "\nSuperheltnavn: " + superHeroName +
                 "\nSuperkræft: " + power +
                 "\nUdgivelses år: " + year +
                 "\nStyrkeniveau: " + strength +
                 "\nOprindelses historie: " + origin +
-                "\nMenneske: " + human + "\n";
+                "\nMenneske: " + human + "\n" + Color.RESET;
     }
 
 }
