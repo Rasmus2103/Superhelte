@@ -3,25 +3,30 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import javax.xml.crypto.Data;
-import java.util.Arrays;
-
 class DatabaseTest {
     //Arrange
     //Act
     //Assert
-    Helt helt;
+    //Helt helt;
+    Database database;
+    Helt testHelt1;
+    Helt testHelt2;
+    Helt testHelt3;
+
 
     @BeforeEach
     void setUp() {
         Database database = new Database();
 
-        Helt testHelt1 = new Helt("Clark Kent", "Supermand", "Laserøjne", 1938, 9.7, "Blev sendt væk da Krypton eksploderet, og han endte på Jorden.", false);
-        Helt testHelt2 = new Helt("Peter Parker", "Spider Man", "Edderkoppekræfter", 1968, 8.6, "Han blev bidt af en radioaktiv edderkop.", true);
-        Helt testHelt3 = new Helt("Bruce Wayne", "Batman", "Gadgets", 1938, 8.6, "Hans forældre blev dræbt, han trænede hårdt, og blev til Batman.", true);
+        testHelt1 = new Helt("Clark Kent", "Supermand", "Laserøjne", 1938, 9.7, "Blev sendt væk da Krypton eksploderet, og han endte på Jorden.", false);
+        testHelt2 = new Helt("Peter Parker", "Spider Man", "Edderkoppekræfter", 1968, 8.6, "Han blev bidt af en radioaktiv edderkop.", true);
+        testHelt3 = new Helt("Bruce Wayne", "Batman", "Gadgets", 1938, 8.6, "Hans forældre blev dræbt, han trænede hårdt, og blev til Batman.", true);
 
-        database.getHelte().addAll(Arrays.asList(testHelt1, testHelt2, testHelt3));
+        database.getHelte().add(testHelt1);
+        database.getHelte().add(testHelt2);
+        database.getHelte().add(testHelt3);
     }
+
 
     @Test
     void addSuperhero() {
@@ -29,8 +34,8 @@ class DatabaseTest {
         Database database = new Database();
 
         //Act
-        database.addSuperhero("Clark Kent", "Supermand", "Laserøjne", 1938, 9.7, "kdfnsdkisgf", false);
-
+        database.addSuperhero("Rasmus", "Super Rasmus", "Kodning",1999, 9.7, "sdjifdsbfdsiof", true);
+        //assertEquals(længde, database.getHelte().size());
         //Assert
         //assertEquals(database.getHelte().size(), 1); //Tjekker om der er 1 objekt i ArrayListen
         assertTrue(database.getHelte().size() > 3);
@@ -47,31 +52,21 @@ class DatabaseTest {
 
     }
 
-    @Test
-    void createAndAddHero() {
+    //@Test
+    /*void createAndAddHero() {
         //Arrange
-        Database database = new Database();
+        int length = 3;
 
         //Act
+        database.addSuperhero("Rasmus", "Super Rasmus", "Kodning",1999, 9.7, "sdjifdsbfdsiof", true);
 
-    }
+        assertEquals(length, database.getHelte().size());
+    }*/
 
     @Test
     void searchForHero() {
-        /*Database database = new Database();
-
-        //Arrange
-        int expectedListSizeNone = 0;
-        int expectedListSizeOne = 1;
-        int expectedListSizeMany = 3;
-
-        //Act
-        String testSearchWordNone = "Powerman";
-        String testSearchWordOne = "Luke";
-        String testSearchWordMany = "man";
-
-        //Assert
-        int testListSizeNone = database.searchForHero(testSearchWordNone).size();*/
+        String name = "Clark Kent";
+        assertEquals(name, testHelt1.getName());
     }
 
     @Test
@@ -84,18 +79,16 @@ class DatabaseTest {
 
     @Test
     void getHelte() {
-        Database database = new Database();
 
-        String expectedName = "Clark Kent";
+        /*String expectedName = "Clark Kent";
 
         String actualName = helt.getName();
 
-        assertEquals(actualName, expectedName);
+        assertEquals(actualName, expectedName);*/
     }
 
     @Test
     void deleteHero() {
-        Database database = new Database();
 
         int expectedValueOfDeletion = 2;
         String expectedNameOfNewIndex0 = "Clark Kent";

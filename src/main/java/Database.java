@@ -20,7 +20,7 @@ public class Database {
     }
 
     public void addSuperhero (String name, String power, int year, double strength, String origin, boolean human) {
-         helte.add(new Helt(name, power, year, strength, origin, human));
+        helte.add(new Helt(name, power, year, strength, origin, human));
     }
 
     //Menu for at vælge at oprette en superhelt eller gå tilbage til startmenuen
@@ -45,43 +45,43 @@ public class Database {
         /*if(n > database.length) {
             System.out.println("Du kan ikke tilføje flere helte");
         }*/
-            sc = new Scanner(System.in);
-            System.out.println("Du kan nu tilføje en Superhelt");
+        sc = new Scanner(System.in);
+        System.out.println("Du kan nu tilføje en Superhelt");
 
-            System.out.println("\nIndtast Superhelten rigtige navn her: ");
-            String name = sc.nextLine();
+        System.out.println("\nIndtast Superhelten rigtige navn her: ");
+        String name = sc.nextLine();
 
-            System.out.println("\n Har din helt et superheltenavn? \nTast 1 for ja \n Tast 2 for nej");
-            int svar = sc.nextInt();
-            sc.nextLine();
+        System.out.println("\n Har din helt et superheltenavn? \nTast 1 for ja \n Tast 2 for nej");
+        int svar = sc.nextInt();
+        sc.nextLine();
 
-            //Laver superHeroName til null, da den starter med ikke have nogen værdi
-            String superHeroName = null;
+        //Laver superHeroName til null, da den starter med ikke have nogen værdi
+        String superHeroName = null;
 
-            //Tilføjer et superheltenavn hvis man taster 1, hvilket giver den en værdi
-            if(svar == 1) {
-                System.out.println("\nIndtast superheltenavnet her: ");
-                superHeroName = sc.nextLine();
+        //Tilføjer et superheltenavn hvis man taster 1, hvilket giver den en værdi
+        if(svar == 1) {
+            System.out.println("\nIndtast superheltenavnet her: ");
+            superHeroName = sc.nextLine();
+        }
+
+        System.out.println("\nIndtast din helts superkræfter her: ");
+        String power = sc.nextLine();
+
+        //Tjekker om ens helt er et menneske
+        System.out.println("\nEr din superhelt et menneske? :");
+        boolean isHuman = true;
+        int choice = 0;
+        while(choice != 1 && choice != 2) {
+            System.out.println("\n Indtast 1 for ja\nIndtast 2 for nej");
+            choice = sc.nextInt();
+            if(choice == 1) {
+                isHuman = true;
             }
-
-            System.out.println("\nIndtast din helts superkræfter her: ");
-            String power = sc.nextLine();
-
-            //Tjekker om ens helt er et menneske
-            System.out.println("\nEr din superhelt et menneske? :");
-            boolean isHuman = true;
-            int choice = 0;
-            while(choice != 1 && choice != 2) {
-                System.out.println("\n Indtast 1 for ja\nIndtast 2 for nej");
-                choice = sc.nextInt();
-                if(choice == 1) {
-                    isHuman = true;
-                }
-                else if(choice == 2) {
-                    isHuman = false;
-                } else {
-                    System.out.println(Color.RED + "Dit input kan ikke registeres, indtast igen" + Color.RESET);
-                }
+            else if(choice == 2) {
+                isHuman = false;
+            } else {
+                System.out.println(Color.RED + "Dit input kan ikke registeres, indtast igen" + Color.RESET);
+            }
 
                 /*switch (choice) {
                     case 1:
@@ -93,35 +93,35 @@ public class Database {
                     default:
                         System.out.println("Dit input kunne ikke registeres, indtast igen");
                 }*/
-            }
+        }
 
-            sc.nextLine();
+        sc.nextLine();
 
-            System.out.println("\nIndtast de år de blev udgivet her: ");
-            while(!sc.hasNextInt()) {
-                String text = sc.next();
-                System.out.println("Du må ikke skrive " + text + ", det skal være tal");
-            }
-            int year = sc.nextInt();
+        System.out.println("\nIndtast de år de blev udgivet her: ");
+        while(!sc.hasNextInt()) {
+            String text = sc.next();
+            System.out.println("Du må ikke skrive " + text + ", det skal være tal");
+        }
+        int year = sc.nextInt();
 
-            System.out.println(("\nIndtast din helts styrke niveau her: "));
-            while (!sc.hasNextDouble()) {
-                String text = sc.next();
-                System.out.println(Color.RED + "Du må ikke indtaste " + text + ", det skal være kommatal" + Color.RESET);
-            }
-            double strength = sc.nextDouble();
+        System.out.println(("\nIndtast din helts styrke niveau her: "));
+        while (!sc.hasNextDouble()) {
+            String text = sc.next();
+            System.out.println(Color.RED + "Du må ikke indtaste " + text + ", det skal være kommatal" + Color.RESET);
+        }
+        double strength = sc.nextDouble();
 
-            System.out.println("\nSkriv din helts oprindelseshistorie her: ");
-            String origin = sc.next();
+        System.out.println("\nSkriv din helts oprindelseshistorie her: ");
+        String origin = sc.next();
 
-            //Tjekker om helten har et superheltenavn
-            if(superHeroName == null) {
-                addSuperhero(name, power, year, strength, origin, isHuman);
-                System.out.println("\nDu har tilføjet " + name + " til databasen");
-            } else {
-                addSuperhero(name, superHeroName, power, year, strength, origin, isHuman);
-                System.out.println("\nDu har tilføjet " + name + " også kaldet for " + superHeroName + " til databasen");
-            }
+        //Tjekker om helten har et superheltenavn
+        if(superHeroName == null) {
+            addSuperhero(name, power, year, strength, origin, isHuman);
+            System.out.println("\nDu har tilføjet " + name + " til databasen");
+        } else {
+            addSuperhero(name, superHeroName, power, year, strength, origin, isHuman);
+            System.out.println("\nDu har tilføjet " + name + " også kaldet for " + superHeroName + " til databasen");
+        }
 
     }
 
@@ -132,12 +132,12 @@ public class Database {
 
         System.out.println("Du kan her søge på Superhelte");
         System.out.println("\n1 Søg efter navn " +
-                            "\n2 Søg efter superheltenavn" +
-                            "\n3 Søg efter power" +
-                            "\n4 Søg efter udgivelsesår" +
-                            "\n5 Søg efter styrkeniveau" +
-                            "\n6 Søg efter oprindelseshistorie" +
-                            "\n9 Tilbage til menuen");
+                "\n2 Søg efter superheltenavn" +
+                "\n3 Søg efter power" +
+                "\n4 Søg efter udgivelsesår" +
+                "\n5 Søg efter styrkeniveau" +
+                "\n6 Søg efter oprindelseshistorie" +
+                "\n9 Tilbage til menuen");
         int choice = sc.nextInt();
         if(choice == 1) {
             searchByname();
@@ -286,7 +286,7 @@ public class Database {
         sc = new Scanner(System.in);
         ui = new UserInterface();
         System.out.println("1 Redigere en superhelt" +
-                        "\n9 Tilbage til menuen");
+                "\n9 Tilbage til menuen");
 
         int choice = sc.nextInt();
         if (choice == 1) {
@@ -369,7 +369,7 @@ public class Database {
         }
         int choice1 = readInt();
         System.out.println("Er du sikker på du gerne vil slette " + helte.get(choice1 -1).getName() + " \n1 Slet " +
-                            helte.get(choice1 -1).getName() + "\n2. Fortryd");
+                helte.get(choice1 -1).getName() + "\n2. Fortryd");
 
         int choice2 = readInt();
         if(choice2 == 1) {
