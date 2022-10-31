@@ -51,17 +51,5 @@ public class UserInterface {
                 }
             } while (menu != 9);
 
-
-            /*switch (menu) {
-                case 1:
-                    database.createAndAddHero();
-                    break;
-                case 9:
-                    System.out.println("Vi ses");
-                    break;
-                default:
-                    System.out.println("Dit valg er ikke gyldigt");
-                    break;
-            }*/
         }
 }

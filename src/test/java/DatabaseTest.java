@@ -52,16 +52,20 @@ class DatabaseTest {
 
     }
 
-    //@Test
-    /*void createAndAddHero() {
+    @Test
+    void createAndAddHero() {
+        Database database = new Database();
+
         //Arrange
-        int length = 3;
+        int expectedLength = 3;
+        int actualLength = 4;
 
         //Act
         database.addSuperhero("Rasmus", "Super Rasmus", "Kodning",1999, 9.7, "sdjifdsbfdsiof", true);
 
-        assertEquals(length, database.getHelte().size());
-    }*/
+        //Assert
+        assertEquals(expectedLength, actualLength, database.getHelte().size());
+    }
 
     @Test
     void searchForHero() {
@@ -80,11 +84,11 @@ class DatabaseTest {
     @Test
     void getHelte() {
 
-        /*String expectedName = "Clark Kent";
+        String expectedName = "Clark Kent";
 
-        String actualName = helt.getName();
+        String actualName = testHelt1.getName();
 
-        assertEquals(actualName, expectedName);*/
+        assertEquals(actualName, expectedName);
     }
 
     @Test

@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0354ab04-c145-43b9-9752-766c604a8dc4" name="Changes" comment="Tilføjet UserInterface, og forbedret min søgefunktion så man kan vælge hvad man vil søge på.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Color.java" afterDir="false" />
+    <list default="true" id="0354ab04-c145-43b9-9752-766c604a8dc4" name="Changes" comment="Tilføjet test til searchForHero">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Helt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Helt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DatabaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -30,7 +32,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Ef1Qcd8dU0MGnyFOSrmJVrX0QN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -38,16 +40,91 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/rasje/OneDrive/Skrivebord/KEA 1. Semester/Programmer/Kageopskriften",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rasje/OneDrive/Skrivebord/KEA 1. Semester/Programmer/Superhelte&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DatabaseTest.addSuperhero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Superhelte" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
+      <option name="METHOD_NAME" value="addSuperhero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest.createAndAddHero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Superhelte" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
+      <option name="METHOD_NAME" value="createAndAddHero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest.deleteHero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Superhelte" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
+      <option name="METHOD_NAME" value="deleteHero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest.getHelte" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Superhelte" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
+      <option name="METHOD_NAME" value="getHelte" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest.searchForHero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Superhelte" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
+      <option name="METHOD_NAME" value="searchForHero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DatabaseTest.deleteHero" />
+        <item itemvalue="JUnit.DatabaseTest.searchForHero" />
+        <item itemvalue="JUnit.DatabaseTest.addSuperhero" />
+        <item itemvalue="JUnit.DatabaseTest.getHelte" />
+        <item itemvalue="JUnit.DatabaseTest.createAndAddHero" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -62,7 +139,33 @@
       <workItem from="1663234300905" duration="13115000" />
       <workItem from="1663313044978" duration="6268000" />
       <workItem from="1663458133959" duration="1028000" />
-      <workItem from="1663571643173" duration="9558000" />
+      <workItem from="1663571643173" duration="9630000" />
+      <workItem from="1663627248701" duration="112000" />
+      <workItem from="1663670825424" duration="5374000" />
+      <workItem from="1663681983368" duration="5037000" />
+      <workItem from="1663745814701" duration="12234000" />
+      <workItem from="1663846612961" duration="6310000" />
+      <workItem from="1663854045110" duration="3244000" />
+      <workItem from="1663857366754" duration="462000" />
+      <workItem from="1663857872473" duration="41000" />
+      <workItem from="1663916042995" duration="5569000" />
+      <workItem from="1663929520310" duration="5458000" />
+      <workItem from="1664174623547" duration="6407000" />
+      <workItem from="1664287278375" duration="295000" />
+      <workItem from="1664453097868" duration="5059000" />
+      <workItem from="1664520059888" duration="603000" />
+      <workItem from="1664745487358" duration="613000" />
+      <workItem from="1664801086609" duration="2526000" />
+      <workItem from="1664876915703" duration="637000" />
+      <workItem from="1664918694072" duration="605000" />
+      <workItem from="1664953048355" duration="611000" />
+      <workItem from="1665053877312" duration="643000" />
+      <workItem from="1665071458390" duration="9000" />
+      <workItem from="1665336364888" duration="214000" />
+      <workItem from="1665401414344" duration="63000" />
+      <workItem from="1666600503600" duration="3689000" />
+      <workItem from="1666776435964" duration="721000" />
+      <workItem from="1667202843006" duration="3418000" />
     </task>
     <task id="LOCAL-00001" summary="Commited">
       <created>1663013041723</created>
@@ -141,7 +244,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663247764864</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Tilføjet edit funktion og gjort programmet mere rubust, så det ikke crasher hvis man skriver noget forkert">
+      <created>1663581426475</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663581426475</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Tilføjet slet funktion, og lavet test på addSuperhero, og delvist lavet test på deleteHero">
+      <created>1663799480214</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663799480214</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Tilføjet test til searchForHero">
+      <created>1663857906602</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1663857906602</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +290,9 @@
     <MESSAGE value="Tilføjet søgefunktion som man kan søge efter navne" />
     <MESSAGE value="Tilføjet mit aktivitetsdiagram" />
     <MESSAGE value="Tilføjet UserInterface, og forbedret min søgefunktion så man kan vælge hvad man vil søge på." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet UserInterface, og forbedret min søgefunktion så man kan vælge hvad man vil søge på." />
+    <MESSAGE value="Tilføjet edit funktion og gjort programmet mere rubust, så det ikke crasher hvis man skriver noget forkert" />
+    <MESSAGE value="Tilføjet slet funktion, og lavet test på addSuperhero, og delvist lavet test på deleteHero" />
+    <MESSAGE value="Tilføjet test til searchForHero" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet test til searchForHero" />
   </component>
 </project>

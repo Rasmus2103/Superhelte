@@ -42,9 +42,6 @@ public class Database {
     //Oprettelse af Superhelte
     public void createAndAddHero() {
         //Tjekker om oprettelsen overskrider det maksimale i helte arrayet
-        /*if(n > database.length) {
-            System.out.println("Du kan ikke tilføje flere helte");
-        }*/
         sc = new Scanner(System.in);
         System.out.println("Du kan nu tilføje en Superhelt");
 
@@ -82,17 +79,6 @@ public class Database {
             } else {
                 System.out.println(Color.RED + "Dit input kan ikke registeres, indtast igen" + Color.RESET);
             }
-
-                /*switch (choice) {
-                    case 1:
-                        isHuman = true;
-                        break;
-                    case 2:
-                        isHuman = false;
-                        break;
-                    default:
-                        System.out.println("Dit input kunne ikke registeres, indtast igen");
-                }*/
         }
 
         sc.nextLine();
